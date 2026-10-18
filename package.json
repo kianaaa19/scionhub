@@ -1,0 +1,13 @@
+{
+  "name": "scionhub",
+  "version": "1.0.0",
+  "description": "ScionHub: a code hosting hub for Scion-style, server-centric, agent-scale source control",
+  "license": "MIT",
+  "private": true,
+  "bin": { "scn": "bin/scn.js" },
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js"
+  }
+}

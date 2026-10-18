@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScionHub</title>
+  <meta name="description" content="ScionHub: code hosting for server-centric, agent-scale source control.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-in">
+      <a class="brand" href="#/"><img src="/logo.svg" alt="" width="26" height="26"><span>ScionHub</span></a>
+      <form id="gsearch" class="gsearch" role="search"><input id="gq" type="search" placeholder="Find a repository…" aria-label="Find a repository"></form>
+      <nav id="nav" class="nav"></nav>
+    </div>
+  </header>
+  <main id="app" class="wrap" aria-live="polite"><p class="muted">Loading…</p></main>
+  <footer class="wrap foot">ScionHub · server-side commits · content-addressed storage · <a href="#/docs">how it works</a></footer>
+  <noscript><p class="wrap">ScionHub needs JavaScript for the web UI. The HTTP API and the <code>scn</code> CLI work without it.</p></noscript>
+  <script src="/app.js"></script>
+</body>
+</html>

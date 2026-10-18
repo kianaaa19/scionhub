@@ -1,0 +1,19 @@
+services:
+  scionhub:
+    build: .
+    image: scionhub:latest
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      # Set to 1 when served over HTTPS (e.g. behind Caddy/nginx/Traefik)
+      COOKIE_SECURE: "${COOKIE_SECURE:-0}"
+      # Set to 1 when behind a reverse proxy so rate limits use X-Forwarded-For
+      TRUST_PROXY: "${TRUST_PROXY:-0}"
+      # Set to 0 after creating your accounts to close signups
+      ALLOW_REGISTRATION: "${ALLOW_REGISTRATION:-1}"
+      MAX_BODY_MB: "${MAX_BODY_MB:-64}"
+    volumes:
+      - scionhub-data:/data
+volumes:
+  scionhub-data:
